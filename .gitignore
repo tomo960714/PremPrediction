@@ -2,5 +2,7 @@
 .venv
 .vscode
 *.code-workspace
-archive/data/predictions/*
+archive
 data/*
+*/__pycache__/*
+test*
