@@ -2,7 +2,7 @@
 .venv
 .vscode
 *.code-workspace
-archive
+archive/
 data/*
 */__pycache__/*
 test*
