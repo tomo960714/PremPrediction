@@ -43,20 +43,18 @@ def save_weekly_leaderboard(leaderboard_df):
 week_id = load_week_id()
 season_id = load_season_id()
 
-if st.button("Save Results JSON"):
+if st.button ("Analyze weekly data"):
+    # save json
     save_results_json(week_id, season_id)
     st.write(f"Results JSON saved for week {week_id} of season {season_id}")
 
-
-
-if st.button("Score Predictions"):
+    # score predictions
     st.write(f"Scoring predictions for week {week_id} of season {season_id}")
     leaderboard_df = score()
     st.write(" Weekly Leaderboard:")
     st.dataframe(leaderboard_df)
 
-
-if st.button("Add to Leaderboard"):
+    # add to leaderboard
     st.write(f"Adding week {week_id} results to the leaderboard for season {season_id}")
     # open the weekly leaderboard CSV
     weekly_leaderboard = load_dataframe_from_csv(f"data/raw/{season_id}/gameweek_{week_id}_leaderboard.csv")
@@ -68,3 +66,5 @@ if st.button("Add to Leaderboard"):
     # Save the updated leaderboard
     save_weekly_leaderboard(updated_leaderboard_df)
     save_leaderboard_csv(updated_leaderboard_df, season_id)
+
+
