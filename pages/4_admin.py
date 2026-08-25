@@ -5,7 +5,7 @@ st.title("Admin Panel")
 
 # TODO: implement admin features:
 # - Set season
-st.text_input("Add your Youtube API key here:", key ="youtube_api")
+#st.text_input("Add your Youtube API key here:", key ="youtube_api")
 
 
 
